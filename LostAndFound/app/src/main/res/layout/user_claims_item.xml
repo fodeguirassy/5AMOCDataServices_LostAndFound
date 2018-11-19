@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/claim_image"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lost_and_found"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@drawable/lost_and_found"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/claim_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/lost_and_found_localisation"
+        app:layout_constraintStart_toStartOf="@id/claim_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/claim_image"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/claim_localisation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_map_pin"
+        android:text="Marseille Saint Charles"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@id/claim_name"
+        app:layout_constraintStart_toStartOf="@id/claim_name"
+        app:layout_constraintTop_toBottomOf="@+id/claim_name"
+        android:drawableTint="@color/redColor"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/claim_description"
+        app:layout_constraintTop_toBottomOf="@id/claim_localisation"
+        app:layout_constraintStart_toStartOf="@id/claim_image"
+        app:layout_constraintEnd_toEndOf="@id/claim_image"
+        app:layout_constraintBottom_toTopOf="@id/claim_status"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:text="bllalalallaalalla jshjqhsqs  jshqhsqjsjqs hdsgds hdsjdjs"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/claim_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/claim_image"
+        app:layout_constraintStart_toStartOf="@id/claim_image"
+        app:layout_constraintTop_toBottomOf="@+id/claim_description"
+        android:backgroundTint="@color/redColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="22dp"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

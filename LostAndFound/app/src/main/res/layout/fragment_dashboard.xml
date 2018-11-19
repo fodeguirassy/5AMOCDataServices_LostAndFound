@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.DashboardFragment"
+    android:background="#FF000000">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="20dp"
+            android:id="@+id/top_container">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/cat"
+                tools:src="@drawable/cat"
+                android:id="@+id/user_imgV"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="180dp"
+                tools:text="Sambarou Mballo"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:padding="5dp"
+                android:id="@+id/user_name"
+                android:background="#99000000"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/user_name"
+                app:layout_constraintStart_toStartOf="@id/user_imgV"
+                app:layout_constraintEnd_toEndOf="@id/user_imgV"
+                tools:text="sambarou@gmail.com"
+                android:textColor="@color/white"
+                android:drawableLeft="@drawable/ic_mail"
+                android:gravity="center_vertical"
+                android:drawableTint="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:id="@+id/user_email"
+                android:drawablePadding="18dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/user_email"
+                app:layout_constraintStart_toStartOf="@id/user_email"
+                app:layout_constraintEnd_toEndOf="@id/user_email"
+                android:text="3 rue de Chanzy, Paris"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_map_pin"
+                android:drawableTint="@color/white"
+                android:gravity="center_vertical"
+                android:drawablePadding="15dp"
+                android:id="@+id/user_adresse"
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src="@drawable/ic_edit"
+                android:tint="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="180dp"
+                />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/top_container"
+            app:layout_constraintStart_toStartOf="@id/top_container"
+            app:layout_constraintTop_toBottomOf="@id/top_container">
+
+            <Button
+                android:id="@+id/user_claims"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/background_red_rounded"
+                android:drawableTint="@color/white"
+                android:drawableTop="@drawable/ic_my_claims"
+                android:padding="10dp"
+                android:text="Mes \n Réclamations"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/my_lost"
+                app:layout_constraintEnd_toStartOf="@+id/founds"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/founds"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:background="@drawable/background_red_rounded"
+                android:drawableTint="@color/white"
+                android:drawableTop="@drawable/ic_my_claims"
+                android:padding="10dp"
+                android:text="Objets\nRetrouvés"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/user_claims"
+                app:layout_constraintTop_toTopOf="@id/user_claims" />
+
+            <Button
+                android:id="@+id/my_lost"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_red_rounded"
+                android:drawableTint="@color/white"
+                android:drawableTop="@drawable/ic_my_claims"
+                android:padding="10dp"
+                android:text="Mes objets\nPerdus"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/user_claims"
+                app:layout_constraintTop_toBottomOf="@+id/user_claims" />
+
+            <Button
+                android:id="@+id/my_founds"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:background="@drawable/background_red_rounded"
+                android:drawableTint="@color/white"
+                android:drawableTop="@drawable/ic_my_claims"
+                android:padding="10dp"
+                android:text="Mes objets\nRetrouvés"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/founds"
+                app:layout_constraintTop_toBottomOf="@id/founds"
+                app:layout_constraintTop_toTopOf="@id/my_lost" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

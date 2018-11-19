@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="18dp"
+    android:background="#FF000000">
+
+    <ImageView
+        android:id="@+id/lost_and_found_imgView"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lost_and_found"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@drawable/lost_and_found"
+        />
+
+    <TextView
+        android:id="@+id/lost_and_found_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/lost_and_found_localisation"
+        app:layout_constraintStart_toStartOf="@id/lost_and_found_imgView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lost_and_found_imgView"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:id="@+id/lost_and_found_localisation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_map_pin"
+        android:text="Marseille Saint Charles"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@id/lost_and_found_name"
+        app:layout_constraintStart_toStartOf="@id/lost_and_found_name"
+        app:layout_constraintTop_toBottomOf="@+id/lost_and_found_name"
+        android:drawableTint="@color/redColor"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Réclamer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/lost_and_found_imgView"
+        app:layout_constraintStart_toStartOf="@id/lost_and_found_imgView"
+        app:layout_constraintTop_toBottomOf="@+id/lost_and_found_localisation"
+        android:backgroundTint="@color/redColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        />
+
+</android.support.constraint.ConstraintLayout>
